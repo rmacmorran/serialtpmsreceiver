@@ -1,17 +1,12 @@
 # Serial TPMS Receiver - Complete Protocol Analysis
 
-🏆 **FULLY DECODED USB TPMS RECEIVER PROTOCOL**
+Reverse engineering of serial data from a USB TPMS (Tire Pressure Monitoring System) receiver. This project includes real-time monitoring tools, protocol documentation, and customizable sensor mappings.
 
-A complete reverse engineering project that successfully decoded a USB TPMS (Tire Pressure Monitoring System) receiver's serial protocol. This project includes real-time monitoring tools, protocol documentation, and validated sensor mappings.
+These devices are found on sites like AliExpress
+https://www.aliexpress.us/item/3256805902381155.html
+https://www.aliexpress.us/item/3256806718424409.html
 
-## 🎯 **Project Achievement**
-
-✅ **Complete protocol reverse engineering**  
-✅ **All 4 tire sensors identified and mapped**  
-✅ **Real-time pressure monitoring** (validated: 21 PSI FL, 30 PSI FR)  
-✅ **Real-time temperature monitoring** in Fahrenheit  
-✅ **Protocol documentation** with XOR checksum validation  
-✅ **Professional monitoring tools** with decoded output  
+The sensors I've seen operate on 433.92MHz. Others may use other frequencies. All you need to know, though, is how to read the serial data.
 
 ## 📊 **Protocol Specification**
 
@@ -28,13 +23,15 @@ A complete reverse engineering project that successfully decoded a USB TPMS (Tir
 
 ## 🚗 **Confirmed Sensor Mapping**
 
-| Sensor ID | Location | Validated Reading |
-|-----------|----------|------------------|
-| **0** | Front Left (FL) | 21 PSI, 73°F ✅ |
-| **1** | Front Right (FR) | 30 PSI, 75°F ✅ |
-| **16** | Rear Left (RL) | 0-23 PSI, 73-75°F ✅ |
-| **17** | Rear Right (RR) | 0-37 PSI, 73°F ✅ |
-| **5** | Internal Reference | 0 PSI, 81°F ✅ |
+My sample sensors:
+
+| Sensor ID | Location 
+|-----------|----------
+| **0** | Front Left (FL)
+| **1** | Front Right (FR)
+| **16** | Rear Left (RL) 
+| **17** | Rear Right (RR)
+| **5** | Internal Reference
 
 ## 🚀 **Quick Start**
 
@@ -101,11 +98,3 @@ python temperature_analyzer.py tpms_data.log 71
 ## 📚 **Technical Documentation**
 
 See **`TPMS_SYSTEM_COMPLETE.md`** for comprehensive protocol documentation, testing methodology, and complete technical specifications.
-
-## 🏆 **Project Status: COMPLETE**
-
-This project successfully achieved complete reverse engineering of a USB TPMS receiver protocol with validated real-world testing and comprehensive documentation.
-
----
-
-*This project demonstrates systematic protocol reverse engineering, real-time data analysis, and hardware validation techniques.*
