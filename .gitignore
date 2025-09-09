@@ -36,9 +36,13 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Log files (but keep example logs)
+# Log files and personal data (but keep example files)
 *.log
+*_log.txt
+com*.*.log
+fresh_*.log
 !*_example.log
+!*_example.txt
 
 # Temporary files
 *.tmp
